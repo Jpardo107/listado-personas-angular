@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LoggingService } from '../LoggingService.service';
 import { Persona } from '../persona.model';
 
 @Component({
@@ -6,13 +7,9 @@ import { Persona } from '../persona.model';
   templateUrl: './persona.component.html',
   styleUrls: ['./persona.component.css']
 })
-export class PersonaComponent implements OnInit {
+export class PersonaComponent{
 
   @Input() persona: Persona; 
   @Input() indice : number;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
