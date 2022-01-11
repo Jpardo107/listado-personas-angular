@@ -19,6 +19,14 @@ html {
     border-radius: 5px;
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   }
+  .box1 {
+    max-width: 400px;
+    margin: 300px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    padding: 1vw;
+  }
   
   #heading {
     background-color: #3F51B5;
