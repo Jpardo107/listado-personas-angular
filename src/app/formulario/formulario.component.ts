@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoggingService } from '../LoggingService.service';
 import { Persona } from '../persona.model';
 import { PersonasService } from '../personas.service';
@@ -10,10 +10,8 @@ import { PersonasService } from '../personas.service';
 })
 export class FormularioComponent{
 
-  //inputNombre: string = ''
-  //inputApellido: string = ''
-  @ViewChild('nombreInput') nombre: ElementRef;
-  @ViewChild('apellidoInput') apellido: ElementRef;
+  inputNombre: string = ''
+  inputApellido: string = ''
 
   constructor(private loggingService:LoggingService, private personaService:PersonasService){
     this.personaService.saludar.subscribe((indice:number) => alert(`El indice es ${indice}`))
@@ -21,13 +19,13 @@ export class FormularioComponent{
 
   agregarPersona()
   {
-    let persona1 = new Persona(this.nombre.nativeElement.value, this.apellido.nativeElement.value)
+    let persona1 = new Persona(this.inputNombre, this.inputApellido)
     this.personaService.agregarPersona(persona1)
     //this.loggingService.enviarMensajeConsola('Se envio Nombre: '+persona1.nombre+'\n Apellido: '+persona1.apellido)
 
 
-    this.nombre.nativeElement.value = ''
-    this.apellido.nativeElement.value = ''
+    this.inputNombre= ''
+    this.inputApellido = ''
 
   }
 }

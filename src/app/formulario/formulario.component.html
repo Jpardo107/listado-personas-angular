@@ -1,13 +1,7 @@
-<form class="form-row d-flex">
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" #nombreInput>
-    </div>
-    &nbsp;
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control" name="apellido" id="apellido" placeholder="apellido" #apellidoInput>
-    </div>
-    &nbsp;
-    <div class="col">
-      <button class="btn btn-primary" type="submit" (click)="agregarPersona()">Agregar</button>
-    </div>
+<form class="item">
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)] = 'inputNombre'>
+
+      <input type="text" name="apellido" id="apellido" placeholder="apellido" #apellidoInput [(ngModel)] = 'inputApellido'>
+
+      <button class="btn btn-primary" type="submit" (click)="agregarPersona()">+</button>
   </form>
