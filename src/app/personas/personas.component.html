@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+  <button style="cursor: pointer" (click) = agregar()>+</button>
+</div>
+
+<div class="box">
+    <app-persona *ngFor="let personaElemento of personas; let i = index"
+      [persona] = "personaElemento"
+      [indice] = "i"> 
+    </app-persona>
+  </div>
+  <div class="box">
+    <app-formulario></app-formulario>
+  </div>
+  <div class="box1"><span>Aplicacion realizada en curso "Universidad Javascript - De Cero A Experto Javascript"</span><br>
+  <span>Mentor: Ingeniero Ubaldo Acosta</span><br>
+  <span>plataforma de enseñanza: <a href="https://www.udemy.com" target="new_blank">www.udemy.com</a></span></div>
+  

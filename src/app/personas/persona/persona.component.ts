@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { LoggingService } from '../LoggingService.service';
-import { Persona } from '../persona.model';
-import { PersonasService } from '../personas.service';
+import { LoggingService } from '../../LoggingService.service';
+import { Persona } from '../../persona.model';
+import { PersonasService } from '../../personas.service';
 
 @Component({
   selector: 'app-persona',

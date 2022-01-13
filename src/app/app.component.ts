@@ -9,13 +9,10 @@ import { PersonasService } from './personas.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  implements OnInit{
-  titulo = 'listado de personas';
-  personas: Persona[] = []
-
-  constructor(private logger:LoggingService,
-              private personaService:PersonasService ){}
   ngOnInit(): void {
-      this.personas = this.personaService.personas;
+    throw new Error('Method not implemented.');
   }
+  titulo = 'listado de personas';
+
 
 }
