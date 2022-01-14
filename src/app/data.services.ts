@@ -24,4 +24,21 @@ export class DataServices
             
         )
     }
+    modificarPersona(index:number, persona:Persona)
+    {
+        let url:string
+        url = `https://listado-personas-fd57a-default-rtdb.firebaseio.com/datos/${index}.json`;
+        this.httpClient.put(url,persona)
+            .subscribe(response => console.log(`Resultado de la modificacion${response}`),
+        error => console.log(`Error al modificar persona ${error}`))
+    }
+
+    eliminarPersona(index:number)
+    {
+        let url:string
+        url = `https://listado-personas-fd57a-default-rtdb.firebaseio.com/datos/${index}.json`;
+        this.httpClient.delete(url)
+            .subscribe(response => console.log(`Resultado de la eliminacion${response}`),
+        error => console.log(`Error al eliminar persona ${error}`))
+    }
 }

@@ -46,9 +46,19 @@ export class PersonasService
       let persona1 = this.personas[index]
       persona1.nombre = persona.nombre
       persona1.apellido = persona.apellido
+      this.dataServices.modificarPersona(index, persona)
     }
     eliminarPersona(index:number)
     {
       this.personas.splice(index, 1)
+      this.dataServices.eliminarPersona(index)
+      this.modificarPersonas()
+    }
+    modificarPersonas()
+    {
+      if(this.personas != null)
+      {
+        this.dataServices.guardarPersonas(this.personas)
+      }
     }
 }
