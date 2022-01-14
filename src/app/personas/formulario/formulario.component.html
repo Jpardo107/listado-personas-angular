@@ -5,5 +5,7 @@
           <input type="text" name="apellido" id="apellido" placeholder="apellido" #apellidoInput [(ngModel)] = 'inputApellido' required>
     
           <button class="btn btn-primary" type="submit" style="cursor: pointer;">+</button>
+          <button *ngIf="index != null" type="submit" style="cursor: pointer;" class="buttonRed"
+          (click) = "eliminarPersona()">-</button>
       </form>
 </div>
