@@ -7,21 +7,22 @@ import { PersonasService } from '../personas.service';
 @Component({
   selector: 'app-personas',
   templateUrl: './personas.component.html',
-  styleUrls: ['./personas.component.css']
+  styleUrls: ['./personas.component.css'],
 })
-export class PersonasComponent implements OnInit {
+export class PersonasComponent implements OnInit 
+{
+  personas: Persona[] = [];
 
-  personas: Persona[] = []
-
-  constructor(private personaService:PersonasService,
-              private router:Router ){}
+  constructor(
+    private personaService: PersonasService,
+    private router: Router
+  ) {}
   ngOnInit(): void {
-      this.personas = this.personaService.personas;
+
+    this.personaService.obtenerPersonas().subscribe((personas:Object) => {this.personas = personas as Persona[]; this.personaService.setPersonas(personas as Persona[])}) 
   }
 
-  agregar()
-  {
-    this.router.navigate(['personas/agregar'])
+  agregar() {
+    this.router.navigate(['personas/agregar']);
   }
-
 }
