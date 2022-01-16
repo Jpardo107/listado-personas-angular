@@ -27,6 +27,14 @@ html {
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
     padding: 1vw;
   }
+  .boxlogin {
+    max-width: 500px;
+    margin: 150px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    padding: 1vw;
+  }
   
   #heading {
     background-color: #3F51B5;
@@ -84,8 +92,36 @@ html {
     font-weight: 200;
     width: 40%;
   }
+  input[type="email"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 40%;
+  }
+  input[type="password"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 40%;
+  }
   
   input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #3F51B5;
+  }
+  input[type="email"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #3F51B5;
+  }
+  input[type="password"]:focus {
     outline: none;
     box-shadow: inset 0 -3px 0 0 #3F51B5;
   }
@@ -104,4 +140,9 @@ html {
     font-size: 30px;
     padding-bottom: 6px;
     border-width: 0;
+  }
+
+  .centrado
+  {
+    text-align: center;
   }
